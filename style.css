@@ -29,22 +29,33 @@
   cursor: pointer;
   transition: width 0.3s;
 }
-.button:hover {
+.button.expand{
   width: 100%;
 }
-.icon:hover:before {
+.icon.expand:before {
   content: "\f00d";
 }
 ul {
   list-style: none;
   position: absolute;
   top: 65px;
-  display: block;
+  display: none;
   background-color: #1b1b1b;
   width: 100%;
   text-align: center;
   border-radius: 5px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+ul::before{
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color:#1b1b1b ;
+    top: -10px;
+    right: 15px;
+    transform: rotate(45deg);
+    z-index: -1;
 }
 ul li {
   line-height: 35px;
